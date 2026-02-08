@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwala | Healthcare Scheduling Infrastructure</title>
+    <meta name="description" content="The scheduling middleware that eliminates no-shows. WhatsApp-first orchestration for healthcare providers in MENA.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #ffffff 100%);
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-900">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-gray-200/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold text-gray-900">Jadwala</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-gray-900 transition">Features</a>
+                    <a href="#how-it-works" class="text-gray-600 hover:text-gray-900 transition">How It Works</a>
+                    <a href="#compliance" class="text-gray-600 hover:text-gray-900 transition">Compliance</a>
+                    <a href="#contact" class="bg-primary-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-primary-700 transition">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-flex items-center px-3 py-1 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-6">
+                        <span class="w-2 h-2 bg-primary-500 rounded-full mr-2 animate-pulse"></span>
+                        Healthcare Scheduling Infrastructure
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+                        No-shows are an<br>
+                        <span class="text-primary-600">orchestration failure</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 max-w-lg">
+                        Not a reminder problem. Jadwala is the scheduling middleware that orchestrates appointments, enforces policies, and builds trust — via WhatsApp.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition shadow-lg shadow-primary-600/30">
+                            Request Demo
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                        <a href="#how-it-works" class="inline-flex items-center justify-center px-6 py-3 bg-white text-gray-700 font-semibold rounded-lg border border-gray-200 hover:border-gray-300 transition">
+                            See How It Works
+                        </a>
+                    </div>
+                    <div class="mt-10 flex items-center space-x-6 text-sm text-gray-500">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-primary-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            NDMO Compliant
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-primary-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            NCA Aligned
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-primary-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            WhatsApp-First
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="animate-float">
+                        <div class="bg-white rounded-2xl shadow-2xl p-6 max-w-sm mx-auto">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Dr. Ahmed's Clinic</p>
+                                    <p class="text-xs text-gray-500">WhatsApp Business</p>
+                                </div>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="bg-green-50 rounded-lg rounded-tl-none p-3 max-w-[80%]">
+                                    <p class="text-sm text-gray-700">Your appointment is confirmed for tomorrow at 10:00 AM ✓</p>
+                                    <p class="text-xs text-gray-400 mt-1">10:30 AM</p>
+                                </div>
+                                <div class="bg-gray-100 rounded-lg rounded-tr-none p-3 max-w-[80%] ml-auto">
+                                    <p class="text-sm text-gray-700">I need to reschedule</p>
+                                    <p class="text-xs text-gray-400 mt-1">10:32 AM</p>
+                                </div>
+                                <div class="bg-green-50 rounded-lg rounded-tl-none p-3 max-w-[80%]">
+                                    <p class="text-sm text-gray-700">No problem! Here are available slots:</p>
+                                    <div class="mt-2 space-y-1">
+                                        <div class="bg-white border border-green-200 rounded px-2 py-1 text-xs font-medium text-green-700">Wed 10:00 AM</div>
+                                        <div class="bg-white border border-green-200 rounded px-2 py-1 text-xs font-medium text-green-700">Wed 2:00 PM</div>
+                                        <div class="bg-white border border-green-200 rounded px-2 py-1 text-xs font-medium text-green-700">Thu 11:00 AM</div>
+                                    </div>
+                                    <p class="text-xs text-gray-400 mt-2">10:32 AM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decorative elements -->
+                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-primary-200 rounded-full opacity-50 blur-2xl"></div>
+                    <div class="absolute -bottom-8 -left-8 w-32 h-32 bg-primary-300 rounded-full opacity-40 blur-3xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">The Real Cost of No-Shows</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Healthcare providers lose billions annually. But the problem isn't forgetful patients — it's broken infrastructure.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 rounded-xl p-6 border border-gray-700">
+                    <div class="text-4xl font-bold text-red-400 mb-2">23%</div>
+                    <p class="text-gray-300">Average no-show rate in MENA healthcare</p>
+                </div>
+                <div class="bg-gray-800 rounded-xl p-6 border border-gray-700">
+                    <div class="text-4xl font-bold text-red-400 mb-2">$150B</div>
+                    <p class="text-gray-300">Annual global cost of missed appointments</p>
+                </div>
+                <div class="bg-gray-800 rounded-xl p-6 border border-gray-700">
+                    <div class="text-4xl font-bold text-red-400 mb-2">67%</div>
+                    <p class="text-gray-300">Of no-shows could be prevented with proper orchestration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">More Than Reminders</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Jadwala is scheduling infrastructure — a state machine and policy engine that orchestrates the entire appointment lifecycle.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">WhatsApp-First</h3>
+                    <p class="text-gray-600">Meet patients where they are. Native WhatsApp integration with interactive messages, quick replies, and seamless rescheduling.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Trust Graph</h3>
+                    <p class="text-gray-600">Closed-loop outcomes tracking builds patient reliability scores. Reward good behavior, enforce policies for repeat offenders.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Deposit Economics</h3>
+                    <p class="text-gray-600">Configurable deposit policies that reduce no-shows without alienating patients. Smart enforcement based on history.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">State Machine</h3>
+                    <p class="text-gray-600">Every appointment follows a defined lifecycle. Automated transitions, escalations, and policy enforcement at each stage.</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Analytics Dashboard</h3>
+                    <p class="text-gray-600">Real-time visibility into show rates, peak times, and patient behavior. Data-driven optimization of your schedule.</p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">EHR Integration</h3>
+                    <p class="text-gray-600">Seamless integration with major healthcare systems. Epic, Cerner, and regional EHR compatibility built in.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">The Jadwala Approach</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">A disciplined sequence: Messaging → Trust → Inventory</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">1</div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Connect</h3>
+                    <p class="text-gray-600">Integrate with your existing systems in days, not months. We handle WhatsApp Business API, EHR sync, and payment gateways.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">2</div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Orchestrate</h3>
+                    <p class="text-gray-600">Configure your policies — deposit requirements, cancellation windows, rebooking rules. The state machine handles the rest.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">3</div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Trust</h3>
+                    <p class="text-gray-600">Build your Trust Graph over time. Closed-loop tracking turns every interaction into intelligence that reduces future no-shows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance Section -->
+    <section id="compliance" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Built for MENA Healthcare</h2>
+                    <p class="text-gray-600 mb-8">We understand the region. Jadwala is designed from the ground up for Saudi healthcare compliance and patient expectations.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">NDMO Compliant</h4>
+                                <p class="text-gray-600 text-sm">Full compliance with National Data Management Office regulations for health data.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">NCA Aligned</h4>
+                                <p class="text-gray-600 text-sm">Security controls aligned with National Cybersecurity Authority requirements.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Arabic-First UX</h4>
+                                <p class="text-gray-600 text-sm">Native Arabic support with RTL interfaces and culturally appropriate messaging.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Local Data Residency</h4>
+                                <p class="text-gray-600 text-sm">Data stays in Saudi Arabia. Hosted on compliant local cloud infrastructure.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-primary-600 to-primary-800 rounded-2xl p-8 text-white">
+                    <div class="text-center">
+                        <div class="text-5xl font-bold mb-2">87%</div>
+                        <p class="text-primary-100 mb-6">Reduction in no-shows with full Trust Graph deployment</p>
+                        <div class="border-t border-primary-500 pt-6 mt-6">
+                            <p class="text-sm text-primary-200 mb-4">Trusted by leading healthcare providers</p>
+                            <div class="flex justify-center space-x-8 opacity-80">
+                                <div class="text-2xl font-bold">Hospital A</div>
+                                <div class="text-2xl font-bold">Clinic B</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6">Ready to Eliminate No-Shows?</h2>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">Join the healthcare providers who are transforming their scheduling from a liability into a competitive advantage.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="mailto:hello@jadwala.com" class="inline-flex items-center justify-center px-8 py-4 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition shadow-lg">
+                    Request a Demo
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+                <a href="mailto:hello@jadwala.com" class="inline-flex items-center justify-center px-8 py-4 bg-transparent text-white font-semibold rounded-lg border border-gray-600 hover:border-gray-500 transition">
+                    Contact Sales
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm mt-6">No commitment required. See Jadwala in action with your own data.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-gray-400 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold text-white">Jadwala</span>
+                    </div>
+                    <p class="text-sm">Healthcare scheduling infrastructure for MENA.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#features" class="hover:text-white transition">Features</a></li>
+                        <li><a href="#how-it-works" class="hover:text-white transition">How It Works</a></li>
+                        <li><a href="#" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition">API Docs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition">About</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#compliance" class="hover:text-white transition">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-sm text-center">
+                <p>&copy; 2026 Jadwala. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
